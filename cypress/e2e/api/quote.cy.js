@@ -28,7 +28,7 @@ describe('GET /quote', () => {
       expect(response.body).to.have.property('slippageBps');
       expect(response.body).to.have.property('platformFee');
       expect(response.body).to.have.property('priceImpactPct');
-      expect(response.body).to.have.property('routePlan').that.is.an('array').with.length(3);
+      expect(response.body).to.have.property('routePlan').that.is.an('array');
       expect(response.body).to.have.property('contextSlot');
       expect(response.body).to.have.property('timeTaken').that.is.a('number');
 

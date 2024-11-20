@@ -85,8 +85,10 @@ describe('API Reliability Tests', () => {
           }
         }).then((response2) => {
           expect(response2.status).to.eq(200);
+          const outAmount1 = Number(response1.body.outAmount);
+          const outAmount2 = Number(response2.body.outAmount);
           expect(Math.abs(outAmount1 - outAmount2)).to.be.within(0, 2); // Ensure the difference is within 0 to 2
         });
-      });
+      });  
     });
   });
